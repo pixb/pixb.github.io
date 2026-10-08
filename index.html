@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mutt Gmail OAuth — Personal Registration</title>
+<meta name="description" content="Mutt Gmail OAuth：仅限单个用户本人使用的 Gmail OAuth 2.0 客户端，用于 neomutt 与 isync/mbsync 在本机同步自己的邮件。">
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -30,15 +31,18 @@
 <p class="sub">个人自用的 Google OAuth 客户端注册主页 · Personal-use registration homepage</p>
 
 <p>
+  <strong>应用名称（App name）：Mutt Gmail OAuth</strong>（授权屏上亦可显示为 <code>mutt</code>）。
   这是一个<strong>仅供单个用户本人使用</strong>的 OAuth 2.0 客户端项目，用途是让本机的
   邮件工具通过 Google 官方 OAuth 2.0 授权流程读取自己的 Gmail 邮箱。
+  本页面为纯静态 HTML，可<strong>无需登录、无需任何账号</strong>直接查看全部内容。
 </p>
 
-<h2>用途</h2>
+<h2>应用目的 / Purpose of this application</h2>
 <ul>
   <li>为本机的 <code>neomutt</code>（邮件客户端）与 <code>isync/mbsync</code>（邮件同步）获取访问令牌</li>
-  <li>授权范围仅限 <code>https://mail.google.com/</code>，即读写本人自己的邮箱</li>
+  <li>授权范围仅限 <code>https://mail.google.com/</code>，即读写<strong>本人自己</strong>的邮箱</li>
   <li>客户端类型为 Desktop app，授权码通过本机 <code>http://localhost</code> 回调获取</li>
+  <li>邮件通过 Google 官方 IMAP 接口直接同步到本机 maildir 目录，不经过任何中转服务器</li>
 </ul>
 
 <h2>数据处理</h2>
@@ -49,12 +53,26 @@
   <li>邮件同步到本机 maildir 目录，不经过任何中转服务器</li>
 </ul>
 
+<h2>Google APIs 合规声明</h2>
+<ul>
+  <li>本应用遵守 <a href="https://developers.google.com/terms">Google APIs Terms of Service</a></li>
+  <li>使用 Google API 获取的数据<strong>仅用于上文所述的邮件同步用途</strong>，不用于任何其他目的</li>
+  <li>本应用<strong>不用于生成 AI 非自愿私密影像（AI-generated Non-Consensual Intimate Imagery, AI NCII）</strong>，也不提供任何与 AI NCII 相关的功能</li>
+  <li>本应用不进行数据抓取、转售、画像分析或任何形式的自动化内容生成</li>
+</ul>
+
 <h2>说明</h2>
 <p>
   本项目为个人工具，按 Google 的
   <em>Exceptions to verification requirements</em> 中的
   <strong>Personal use</strong> 情形使用，不对外发布、用户数远少于 100 人，
   因此未提交 Google 应用验证；在授权屏上会显示“未验证的应用”提示，属于预期行为。
+</p>
+
+<h2>联系</h2>
+<p>
+  本项目仅由开发者本人使用，不设对外支持渠道；
+  Google 控制台中配置的 User support email 即为开发者联系方式。
 </p>
 
 <footer>

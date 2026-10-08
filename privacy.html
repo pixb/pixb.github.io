@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隐私政策 · Privacy Policy — Mutt Gmail OAuth</title>
+<meta name="description" content="Mutt Gmail OAuth 隐私政策：不收集任何用户数据，令牌仅本机 GPG 加密保存。">
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -31,9 +32,21 @@
 <p>
   本隐私政策适用于 <a href="./index.html">Mutt Gmail OAuth</a> 这一
   <strong>个人自用</strong>的 OAuth 2.0 客户端项目。它不面向公众，也不对外提供服务。
+  本页面为纯静态 HTML，可无需登录查看。
 </p>
 
-<h2>我们收集了什么</h2>
+<h2>我们访问/处理了什么数据</h2>
+<p>
+  本应用通过 Google OAuth 2.0 获得授权，仅访问<strong>用户本人账号</strong>的 Gmail 邮件，
+  授权范围为 <code>https://mail.google.com/</code>（IMAP 读写）。具体包括：
+</p>
+<ul>
+  <li>邮件的发件人、收件人、主题、正文、附件与时间戳（用于在本机收发邮件）</li>
+  <li>邮箱文件夹结构与已读/未读状态（用于 <code>isync/mbsync</code> 增量同步）</li>
+  <li><strong>不访问</strong>通讯录、日历、云盘、YouTube 或任何其他 Google 服务数据</li>
+</ul>
+
+<h2>我们收集了什么（本应用自身）</h2>
 <p><strong>什么都不收集。</strong></p>
 <ul>
   <li>本应用没有服务器、没有数据库、没有后端</li>
@@ -42,16 +55,44 @@
   <li>不收集姓名、邮箱、设备信息、使用行为或其他任何个人信息</li>
 </ul>
 
-<h2>数据如何处理</h2>
+<h2>数据用途 / Purpose</h2>
+<ul>
+  <li>仅用于在用户本人的电脑上显示与收发邮件</li>
+  <li>不用于广告、营销、画像分析、模型训练或任何形式的自动化内容生成</li>
+  <li>不用于生成 AI 非自愿私密影像（AI NCII）</li>
+</ul>
+
+<h2>数据如何处理与存储</h2>
 <ul>
   <li>OAuth 访问令牌与刷新令牌仅保存在用户本人的本机文件中，并使用 GPG 公钥加密</li>
   <li>令牌不会上传到任何服务器，也不会提交给任何第三方</li>
   <li>邮件通过 Google 官方 IMAP 接口直接同步到本机 maildir 目录，不经过任何中间服务</li>
-  <li>授权范围仅为 <code>https://mail.google.com/</code>，即用户本人自己的邮箱</li>
+  <li>数据存储位置：用户本人的电脑（本地磁盘），无任何云端副本</li>
+</ul>
+
+<h2>保留期限 / Data retention</h2>
+<ul>
+  <li>邮件数据保留在本机，直至用户手动删除</li>
+  <li>令牌文件保留至用户撤销授权或删除本机令牌文件为止</li>
+  <li>本应用不主动设定自动删除周期，因为数据从未离开用户本人的设备</li>
 </ul>
 
 <h2>数据共享与出售</h2>
-<p>不共享、不出售、不交换任何数据 —— 因为根本没有收集数据。</p>
+<p>不共享、不出售、不交换任何数据 —— 因为根本没有收集数据。唯一的外部请求方为 Google 官方接口本身。</p>
+
+<h2>用户权利</h2>
+<ul>
+  <li>访问/导出：用户可直接在本机打开 maildir 目录查看全部邮件</li>
+  <li>删除：删除本机邮件目录即可删除全部数据</li>
+  <li>撤销：随时在下方“撤销授权”处撤销访问权限，令牌立即失效</li>
+</ul>
+
+<h2>安全措施</h2>
+<ul>
+  <li>令牌使用 GPG 公钥加密存储，解密需要本机私钥口令</li>
+  <li>授权通过 Google 官方 OAuth 2.0 流程完成，不接触、不记录用户的 Google 密码</li>
+  <li>邮件同步使用 TLS 加密通道</li>
+</ul>
 
 <h2>撤销授权</h2>
 <p>
@@ -66,11 +107,13 @@
 <h2>联系方式</h2>
 <p>
   本项目仅由开发者本人使用，不设对外支持渠道；
-  Google 授权屏上显示的 User support email 即为开发者联系方式。
+  Google 授权屏与控制台中显示的 User support email 即为开发者联系方式。
 </p>
 
 <footer>
   <a href="./index.html">返回主页 / Back to homepage</a>
+  ·
+  <a href="./terms.html">服务条款 / Terms of Service</a>
 </footer>
 
 </body>
