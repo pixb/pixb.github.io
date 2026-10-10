@@ -39,6 +39,17 @@
 </p>
 
 <h2>应用目的 / Purpose of this application</h2>
+<p>
+  <strong>English.</strong> Mutt Gmail OAuth is a <strong>personal-use desktop OAuth 2.0
+  client</strong>. Its sole purpose is to let the developer's own mail tools —
+  <code>neomutt</code> and <code>isync/mbsync</code> — obtain an access token through
+  Google's official OAuth 2.0 authorization flow and sync the developer's
+  <strong>own Gmail mailbox</strong> over IMAP directly to the developer's own computer.
+  The requested scope is <code>https://mail.google.com/</code>. The app is a Desktop app
+  client; the authorization code is received on <code>http://localhost</code>.
+  This app does not serve other users, has no sign-in, and this home page is fully
+  publicly readable without logging in.
+</p>
 <ul>
   <li>为本机的 <code>neomutt</code>（邮件客户端）与 <code>isync/mbsync</code>（邮件同步）获取访问令牌</li>
   <li>授权范围仅限 <code>https://mail.google.com/</code>，即读写<strong>本人自己</strong>的邮箱</li>
@@ -54,12 +65,35 @@
   <li>邮件同步到本机 maildir 目录，不经过任何中转服务器</li>
 </ul>
 
-<h2>Google APIs 合规声明</h2>
+<h2>Google APIs 合规声明 / Compliance</h2>
 <ul>
-  <li>本应用遵守 <a href="https://developers.google.com/terms">Google APIs Terms of Service</a></li>
-  <li>使用 Google API 获取的数据<strong>仅用于上文所述的邮件同步用途</strong>，不用于任何其他目的</li>
-  <li>本应用<strong>不用于生成 AI 非自愿私密影像（AI-generated Non-Consensual Intimate Imagery, AI NCII）</strong>，也不提供任何与 AI NCII 相关的功能</li>
-  <li>本应用不进行数据抓取、转售、画像分析或任何形式的自动化内容生成</li>
+  <li>
+    Mutt Gmail OAuth's use of information received from Google APIs will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </li>
+  <li>
+    This app complies with the
+    <a href="https://developers.google.com/terms">Google APIs Terms of Service</a>.
+  </li>
+  <li>
+    <strong>Mutt Gmail OAuth does not use Google APIs or Google user data to create,
+    request, generate, or distribute AI-generated non-consensual intimate imagery
+    (AI-generated Non-Consensual Intimate Imagery, AI NCII).</strong>
+    It does not use Google APIs for any NCII, deepfake, or intimate-imagery purpose.
+  </li>
+  <li>
+    Google user data is used solely to sync the user's own mailbox via IMAP on the
+    user's own device. It is not used for advertising, is not sold or shared with
+    third parties, and is not used to train or improve any machine learning or
+    artificial intelligence model.
+  </li>
+  <li>
+    No humans read Google user data except the user themself on their own device.
+    Tokens are stored only on the user's device, GPG-encrypted.
+  </li>
+  <li>本应用不用于生成 AI 非自愿私密影像（AI NCII），也不用于深度伪造或任何亲密影像用途。</li>
+  <li>Google 用户数据仅用于在用户本人设备上通过 IMAP 同步其本人邮箱，不用于广告、不出售、不共享、不用于训练任何 AI 模型。</li>
 </ul>
 
 <h2>说明</h2>
