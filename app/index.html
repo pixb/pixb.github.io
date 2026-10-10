@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mutt Gmail OAuth — Personal Registration</title>
+<meta name="description" content="Mutt Gmail OAuth：仅限单个用户本人使用的 Gmail OAuth 2.0 客户端，用于 neomutt 与 isync/mbsync 在本机同步自己的邮件。">
+<meta name="google-site-verification" content="PKrEntuvZZqv5UZFOwaJuxD1N4y796nHZ81kUr0_VZo">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; padding: 3rem 1.5rem;
+    font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 44rem; margin-inline: auto;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 .25rem; }
+  .sub { opacity: .65; margin: 0 0 2rem; font-size: .95rem; }
+  h2 { font-size: 1.05rem; margin: 2rem 0 .5rem; }
+  ul { padding-left: 1.25rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+  footer {
+    margin-top: 2.5rem; padding-top: 1.25rem;
+    border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    font-size: .95rem;
+  }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+
+<h1>Mutt Gmail OAuth</h1>
+<p class="sub">个人自用的 Google OAuth 客户端注册主页 · Personal-use registration homepage</p>
+
+<p>
+  <strong>应用名称（App name）：Mutt Gmail OAuth</strong>（授权屏上亦可显示为 <code>mutt</code>）。
+  这是一个<strong>仅供单个用户本人使用</strong>的 OAuth 2.0 客户端项目，用途是让本机的
+  邮件工具通过 Google 官方 OAuth 2.0 授权流程读取自己的 Gmail 邮箱。
+  本页面为纯静态 HTML，可<strong>无需登录、无需任何账号</strong>直接查看全部内容。
+</p>
+
+<h2>应用目的 / Purpose of this application</h2>
+<p>
+  <strong>English.</strong> Mutt Gmail OAuth is a <strong>personal-use desktop OAuth 2.0
+  client</strong>. Its sole purpose is to let the developer's own mail tools —
+  <code>neomutt</code> and <code>isync/mbsync</code> — obtain an access token through
+  Google's official OAuth 2.0 authorization flow and sync the developer's
+  <strong>own Gmail mailbox</strong> over IMAP directly to the developer's own computer.
+  The requested scope is <code>https://mail.google.com/</code>. The app is a Desktop app
+  client; the authorization code is received on <code>http://localhost</code>.
+  This app does not serve other users, has no sign-in, and this home page is fully
+  publicly readable without logging in.
+</p>
+<ul>
+  <li>为本机的 <code>neomutt</code>（邮件客户端）与 <code>isync/mbsync</code>（邮件同步）获取访问令牌</li>
+  <li>授权范围仅限 <code>https://mail.google.com/</code>，即读写<strong>本人自己</strong>的邮箱</li>
+  <li>客户端类型为 Desktop app，授权码通过本机 <code>http://localhost</code> 回调获取</li>
+  <li>邮件通过 Google 官方 IMAP 接口直接同步到本机 maildir 目录，不经过任何中转服务器</li>
+</ul>
+
+<h2>数据处理</h2>
+<ul>
+  <li>本应用不对外提供服务，不接受任何第三方注册或登录</li>
+  <li>不收集、不上传、不统计任何用户数据</li>
+  <li>访问令牌仅保存在用户本人的本机，并以 GPG 加密存储</li>
+  <li>邮件同步到本机 maildir 目录，不经过任何中转服务器</li>
+</ul>
+
+<h2>Google APIs 合规声明 / Compliance</h2>
+<ul>
+  <li>
+    Mutt Gmail OAuth's use of information received from Google APIs will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </li>
+  <li>
+    This app complies with the
+    <a href="https://developers.google.com/terms">Google APIs Terms of Service</a>.
+  </li>
+  <li>
+    <strong>Mutt Gmail OAuth does not use Google APIs or Google user data to create,
+    request, generate, or distribute AI-generated non-consensual intimate imagery
+    (AI-generated Non-Consensual Intimate Imagery, AI NCII).</strong>
+    It does not use Google APIs for any NCII, deepfake, or intimate-imagery purpose.
+  </li>
+  <li>
+    Google user data is used solely to sync the user's own mailbox via IMAP on the
+    user's own device. It is not used for advertising, is not sold or shared with
+    third parties, and is not used to train or improve any machine learning or
+    artificial intelligence model.
+  </li>
+  <li>
+    No humans read Google user data except the user themself on their own device.
+    Tokens are stored only on the user's device, GPG-encrypted.
+  </li>
+  <li>本应用不用于生成 AI 非自愿私密影像（AI NCII），也不用于深度伪造或任何亲密影像用途。</li>
+  <li>Google 用户数据仅用于在用户本人设备上通过 IMAP 同步其本人邮箱，不用于广告、不出售、不共享、不用于训练任何 AI 模型。</li>
+</ul>
+
+<h2>说明</h2>
+<p>
+  本项目为个人工具，按 Google 的
+  <em>Exceptions to verification requirements</em> 中的
+  <strong>Personal use</strong> 情形使用，不对外发布、用户数远少于 100 人，
+  因此未提交 Google 应用验证；在授权屏上会显示“未验证的应用”提示，属于预期行为。
+</p>
+
+<h2>联系</h2>
+<p>
+  本项目仅由开发者本人使用，不设对外支持渠道；
+  Google 控制台中配置的 User support email 即为开发者联系方式。
+</p>
+
+<footer>
+  <a href="/privacy.html">隐私政策 / Privacy Policy</a>
+  ·
+  <a href="/terms.html">服务条款 / Terms of Service</a>
+</footer>
+
+</body>
+</html>
